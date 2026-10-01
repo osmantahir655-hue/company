@@ -70,9 +70,26 @@ body {
     padding: 0.6rem 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
 }
 
-.nav-menu ul {
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links ul {
     list-style: none;
     display: flex;
     gap: 2.5rem;
@@ -280,27 +297,71 @@ body {
 
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem 5%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 5%;
+        position: relative;
+    }
+
+    .header-right {
+        gap: 0;
     }
 
     .nav-menu {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0.8rem 1rem;
-        border-radius: 20px;
+        width: auto;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
     }
 
-    .nav-menu ul {
-        gap: 1.2rem;
-        flex-wrap: wrap;
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
         justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        margin: 0 5%;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(42, 27, 77, 0.1);
+        z-index: 1000;
+        gap: 1.5rem;
+    }
+    
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        width: 100%;
     }
 
     .nav-menu a {
-        font-size: 0.95rem;
+        display: block;
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+    }
+
+    .lang-btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
