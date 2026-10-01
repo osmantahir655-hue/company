@@ -135,6 +135,13 @@ body {
     gap: 1.5rem;
 }
 
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-inline-start: 1.5rem;
+}
+
 .lang-btn {
     background-color: transparent;
     color: var(--color-text-dark);
@@ -322,6 +329,10 @@ body {
         justify-content: center;
     }
 
+    .header-controls {
+        margin-inline-start: 0;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -360,8 +371,8 @@ body {
     }
 
     .lang-btn {
-        width: 100%;
-        text-align: center;
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
     }
 }
 

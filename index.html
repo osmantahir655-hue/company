@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -21,21 +21,24 @@
         </div>
         <div class="header-right">
             <nav class="nav-menu">
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="index.html" data-i18n="navHome">Home</a></li>
-                        <li><a href="about.html" data-i18n="navAbout">About</a></li>
-                        <li><a href="services.html" data-i18n="navServices">Services</a></li>
-                        <li><a href="achievements.html" data-i18n="navAchievements">Achievements</a></li>
+                        <li><a href="index.html" data-i18n="navHome">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="navAbout">من نحن</a></li>
+                        <li><a href="services.html" data-i18n="navServices">خدماتنا</a></li>
+                        <li><a href="achievements.html" data-i18n="navAchievements">إنجازاتنا</a></li>
                     </ul>
-                    <button id="langToggle" class="lang-btn" data-i18n="langToggle">العربية</button>
+                </div>
+                <div class="header-controls">
+                    <button id="langToggle" class="lang-btn" data-i18n="langToggle">English</button>
+                    <button class="mobile-menu-btn" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
             </nav>
         </div>
@@ -43,10 +46,9 @@
 
     <main class="hero-section">
         <div class="hero-content">
-            <h1 data-i18n="heroTitle">Welcome to Friends dev</h1>
-            <p data-i18n="heroSubtitle">We build modern, reliable and user-friendly digital solutions that help
-                businesses grow and succeed.</p>
-            <a href="#contact" class="btn-primary" data-i18n="heroContact">Contact</a>
+            <h1 data-i18n="heroTitle">مرحبا بك في Friends للتطوير</h1>
+            <p data-i18n="heroSubtitle">نبني حلولاً رقمية حديثة وموثوقة وسهلة الاستخدام تساعد الشركات على النمو والنجاح.</p>
+            <a href="#contact" class="btn-primary" data-i18n="heroContact">تواصل معنا</a>
         </div>
         <div class="hero-image">
             <img src="assets/hero.jpg" alt="Developer typing on a laptop with code">
@@ -57,7 +59,8 @@
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/256727164537" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
         </svg>
     </a>
 </body>

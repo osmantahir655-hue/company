@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let currentLang = localStorage.getItem('siteLang') || 'en';
+    let currentLang = localStorage.getItem('siteLang') || 'ar';
     
     function setLanguage(lang) {
         currentLang = lang;
