@@ -149,7 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
             btnDetails: "View Details",
             proj2Title: "Bint Khuwaylid Student Registration System",
             proj2Desc: "A complete online student registration web application featuring secure public, parent, and admin portals, designed with a custom uniform-inspired blue styling scheme.",
-            langToggle: "العربية"
+            langToggle: "العربية",
+            footerBrandDesc: "Building modern, reliable, and user-friendly digital solutions.",
+            footerLinksTitle: "Quick Links",
+            footerContactTitle: "Contact Us",
+            footerLocation: "Kampala, Uganda",
+            footerCopyright: "© 2026 Friends Dev. All rights reserved."
         },
         ar: {
             navHome: "الرئيسية",
@@ -188,7 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
             btnDetails: "عرض التفاصيل",
             proj2Title: "نظام تسجيل طلاب بنت خويلد",
             proj2Desc: "تطبيق ويب كامل لتسجيل الطلاب عبر الإنترنت يتميز ببوابات عامة وأولياء أمور وإداريين آمنة، مصمم بنظام ألوان أزرق مخصص مستوحى من الزي المدرسي.",
-            langToggle: "English"
+            langToggle: "English",
+            footerBrandDesc: "بناء حلول رقمية حديثة وموثوقة وسهلة الاستخدام.",
+            footerLinksTitle: "روابط سريعة",
+            footerContactTitle: "تواصل معنا",
+            footerLocation: "كمبالا، أوغندا",
+            footerCopyright: "© 2026 Friends Dev. جميع الحقوق محفوظة."
         }
     };
 

@@ -720,3 +720,102 @@ body {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
+
+/* Footer Styles */
+.footer {
+    background-color: #312e81;
+    color: #f8f9fa;
+    padding: 4rem 5% 2rem 5%;
+    font-family: var(--font-family);
+    text-align: start;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+/* Column 1: Brand */
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+    filter: brightness(0) invert(1);
+}
+
+.brand-col p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+/* Column 2 & 3: Lists */
+.links-col ul, .contact-col ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.links-col ul li, .contact-col ul li {
+    margin-bottom: 1rem;
+}
+
+.links-col ul li a, .contact-col ul li a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+    font-size: 1.1rem;
+}
+
+.links-col ul li a:hover, .contact-col ul li a:hover {
+    color: var(--color-text-light);
+}
+
+.contact-col span {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+/* Copyright Bar */
+.footer-bottom {
+    max-width: 1400px;
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.footer-bottom p {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .footer {
+        padding: 3rem 5% 1.5rem 5%;
+    }
+}
