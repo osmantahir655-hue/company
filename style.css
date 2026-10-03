@@ -54,6 +54,8 @@ section[id], footer[id] {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex: 1;
     cursor: pointer;
     transition: transform var(--transition-speed) cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -84,6 +86,7 @@ section[id], footer[id] {
     border: 1px solid rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
+    flex: none;
 }
 
 .mobile-menu-btn {
@@ -140,18 +143,38 @@ section[id], footer[id] {
     width: 100%;
 }
 
-/* Header Right (Nav + Lang Toggle) */
-.header-right {
+/* Nav Actions & CTA */
+.nav-actions {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.header-controls {
-    display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 1rem;
-    margin-inline-start: 1.5rem;
+    flex: 1;
+}
+
+.nav-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-btn-bg);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    white-space: nowrap;
+}
+
+.nav-cta-btn:hover {
+    background-color: var(--color-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(49, 46, 129, 0.3);
+    color: #ffffff;
+}
+
+.mobile-only {
+    display: none;
 }
 
 .lang-btn {
@@ -322,8 +345,13 @@ section[id], footer[id] {
         position: relative;
     }
 
-    .header-right {
-        gap: 0;
+    .logo {
+        flex: auto;
+    }
+
+    .nav-actions {
+        flex: auto;
+        gap: 0.5rem;
     }
 
     .nav-menu {
@@ -341,8 +369,18 @@ section[id], footer[id] {
         justify-content: center;
     }
 
-    .header-controls {
-        margin-inline-start: 0;
+    .desktop-cta {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .mobile-cta {
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links {
