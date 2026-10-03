@@ -714,6 +714,13 @@ section[id], footer[id] {
     transform: scale(1.02);
 }
 
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
 .project-content h2 {
     font-size: 2.2rem;
     color: var(--color-text-dark);
