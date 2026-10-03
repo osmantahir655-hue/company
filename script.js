@@ -173,7 +173,10 @@ document.addEventListener('DOMContentLoaded', () => {
             footerLinksTitle: "Quick Links",
             footerContactTitle: "Contact Us",
             footerLocation: "Kampala, Uganda",
-            footerCopyright: "© 2026 Friends Dev. All rights reserved."
+            footerCopyright: "© 2026 Friends Dev. All rights reserved.",
+            "achieve-proj5-title": "Software Engineer Mohmed Portfolio",
+            "achieve-proj5-desc": "A professional digital platform showcasing the skills, projects, and technical expertise of the engineer, highlighting their proficiency in software development.",
+            "achieve-btn": "View Details"
         },
         ar: {
             navHome: "الرئيسية",
@@ -240,7 +243,10 @@ document.addEventListener('DOMContentLoaded', () => {
             footerLinksTitle: "روابط سريعة",
             footerContactTitle: "تواصل معنا",
             footerLocation: "كمبالا، أوغندا",
-            footerCopyright: "© 2026 Friends Dev. جميع الحقوق محفوظة."
+            footerCopyright: "© 2026 Friends Dev. جميع الحقوق محفوظة.",
+            "achieve-proj5-title": "معرض أعمال المهندس البرمجي محمد",
+            "achieve-proj5-desc": "منصة رقمية احترافية تستعرض المهارات، والمشاريع، والخبرات التقنية الخاصة بالمهندس لتسليط الضوء على كفاءته في تطوير البرمجيات.",
+            "achieve-btn": "عرض التفاصيل"
         }
     };
 
