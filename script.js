@@ -24,15 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Smooth scrolling for navigation links
-    document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    document.querySelectorAll('.nav-menu a, .footer-col a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Only prevent default if it's an anchor link on the same page
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                
-                // Add active state styling
+            // Allow native smooth scrolling via CSS, just update active styles for nav
+            if (href.startsWith('#') && this.closest('.nav-menu')) {
                 document.querySelectorAll('.nav-menu a').forEach(a => a.style.color = '');
                 this.style.color = 'var(--color-btn-hover)';
             }
@@ -57,19 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Reveal functionality using IntersectionObserver
-    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
     
     if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('is-visible');
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.15
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
@@ -115,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         en: {
             navHome: "Home",
             navAbout: "About",
+            navVision: "Vision",
+            navMission: "Mission",
+            navFounders: "Founders",
             navServices: "Services",
             navAchievements: "Achievements",
             heroTitle: "Welcome to Friends dev",
@@ -125,6 +124,21 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutP2: "What started as a simple idea grew through dedication, persistence, and a desire to create meaningful digital solutions. Today, we work together to turn ideas into modern websites, mobile applications, and custom software solutions.",
             aboutP3: "As a growing team, we are constantly learning, improving, and exploring new technologies. Our goal is to build reliable and user-friendly digital products while turning our challenges into opportunities to grow.",
             aboutP4: "We believe that great things can start with a simple idea, a strong team, and the determination to keep going.",
+            visionTitle: "Our Vision",
+            visionP1: "To become a leading technology company in innovating smart and reliable digital solutions, transforming ambitious ideas into impactful products, simplifying the lives of individuals and businesses, and contributing to building a more innovative and advanced future.",
+            visionP2: "We aspire to be a trusted partner for anyone seeking to turn their idea into a digital reality, through technology, creativity, and continuous learning, with a focus on delivering exceptional experiences and scalable, evolvable solutions.",
+            visionP3: "We don't just build products for today; we innovate solutions that create the opportunities of tomorrow.",
+            missionTitle: "Our Mission",
+            missionP1: "Our mission is to develop innovative and reliable technological solutions that help individuals and businesses transform their ideas and challenges into practical digital products with real value.",
+            missionP2: "We work to employ modern technology and creativity to understand our clients' needs, design easy and effective digital experiences, and build applications and products that are scalable and growable.",
+            missionP3: "We believe that our success starts with the success of our clients. Therefore, we are committed to continuous learning, quality, innovation, and building long-term partnerships that contribute to turning ideas into tangible achievements.",
+            foundersTitle: "Our Founders",
+            founder1Name: "Taha Osman",
+            founder1Role: "CEO",
+            founder2Name: "Muawia Mohmed",
+            founder2Role: "CTO",
+            founder3Name: "Mohammed Osman",
+            founder3Role: "COO",
             servicesTitle: "Our Services",
             servicesSubtitle: "Discover the digital solutions we offer to help your business grow.",
             srvMobileTitle: "Mobile Apps",
@@ -159,6 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ar: {
             navHome: "الرئيسية",
             navAbout: "من نحن",
+            navVision: "الرؤية",
+            navMission: "الرسالة",
+            navFounders: "المؤسسون",
             navServices: "خدماتنا",
             navAchievements: "إنجازاتنا",
             heroTitle: "مرحبا بك في Friends للتطوير",
@@ -169,6 +186,21 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutP2: "ما بدأ كفكرة بسيطة نما من خلال التفاني والمثابرة والرغبة في إيجاد حلول رقمية هادفة. اليوم، نعمل معاً لتحويل الأفكار إلى مواقع حديثة وتطبيقات هواتف وحلول برمجية مخصصة.",
             aboutP3: "كفريق متنامٍ، نحن نتعلم باستمرار ونتحسن ونستكشف تقنيات جديدة. هدفنا هو بناء منتجات رقمية موثوقة وسهلة الاستخدام مع تحويل تحدياتنا إلى فرص للنمو.",
             aboutP4: "نحن نؤمن بأن الأشياء العظيمة يمكن أن تبدأ بفكرة بسيطة، فريق قوي، وتصميم على الاستمرار.",
+            visionTitle: "رؤيتنا",
+            visionP1: "أن نصبح شركة تقنية رائدة في ابتكار حلول رقمية ذكية وموثوقة، تُحوّل الأفكار الطموحة إلى منتجات مؤثرة، وتُسهّل حياة الأفراد والأعمال، وتُسهم في بناء مستقبل أكثر ابتكارًا وتقدمًا.",
+            visionP2: "نطمح إلى أن نكون شريكًا موثوقًا لكل من يسعى إلى تحويل فكرته إلى واقع رقمي، من خلال التكنولوجيا والإبداع والتعلّم المستمر، مع التركيز على تقديم تجارب استثنائية وحلول قابلة للنمو والتطور.",
+            visionP3: "نحن لا نبني منتجات اليوم فقط، بل نبتكر حلولًا تصنع فرص الغد.",
+            missionTitle: "رسالتنا",
+            missionP1: "تتمثل رسالتنا في تطوير حلول تقنية مبتكرة وموثوقة تساعد الأفراد والشركات على تحويل أفكارهم وتحدياتهم إلى منتجات رقمية عملية وذات قيمة حقيقية.",
+            missionP2: "نعمل على توظيف التكنولوجيا الحديثة والإبداع لفهم احتياجات عملائنا، وتصميم تجارب رقمية سهلة وفعّالة، وبناء تطبيقات ومنتجات قابلة للتطور والنمو.",
+            missionP3: "ونؤمن بأن نجاحنا يبدأ من نجاح عملائنا، لذلك نلتزم بالتعلّم المستمر، والجودة، والابتكار، وبناء شراكات طويلة الأمد تساهم في تحويل الأفكار إلى إنجازات ملموسة.",
+            foundersTitle: "المؤسسون",
+            founder1Name: "طه عثمان",
+            founder1Role: "المدير التنفيذي",
+            founder2Name: "معاوية محمد",
+            founder2Role: "المدير التقني",
+            founder3Name: "محمد عثمان",
+            founder3Role: "مدير التشغيل",
             servicesTitle: "خدماتنا",
             servicesSubtitle: "اكتشف الحلول الرقمية التي نقدمها لمساعدة عملك على النمو.",
             srvMobileTitle: "تطبيقات الهواتف",

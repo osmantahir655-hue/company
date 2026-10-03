@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html" class="logo-link">
+            <a href="#home" class="logo-link">
                 <img src="assets/Friends%20dev%20Logo%202.png" alt="Friends Dev Logo" class="logo-img">
             </a>
         </div>
@@ -23,10 +23,13 @@
             <nav class="nav-menu">
                 <div class="nav-links">
                     <ul>
-                        <li><a href="index.html" data-i18n="navHome">الرئيسية</a></li>
-                        <li><a href="about.html" data-i18n="navAbout">من نحن</a></li>
-                        <li><a href="services.html" data-i18n="navServices">خدماتنا</a></li>
-                        <li><a href="achievements.html" data-i18n="navAchievements">إنجازاتنا</a></li>
+                        <li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+                        <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+                        <li><a href="#vision" data-i18n="navVision">الرؤية</a></li>
+                        <li><a href="#mission" data-i18n="navMission">الرسالة</a></li>
+                        <li><a href="#founders" data-i18n="navFounders">المؤسسون</a></li>
+                        <li><a href="#services" data-i18n="navServices">خدماتنا</a></li>
+                        <li><a href="#achievements" data-i18n="navAchievements">إنجازاتنا</a></li>
                     </ul>
                 </div>
                 <div class="header-controls">
@@ -44,36 +47,252 @@
         </div>
     </header>
 
-    <main class="hero-section">
-        <div class="hero-content">
+    <section id="home" class="hero-section">
+        <div class="hero-content reveal-on-scroll">
             <h1 data-i18n="heroTitle">مرحبا بك في Friends للتطوير</h1>
             <p data-i18n="heroSubtitle">نبني حلولاً رقمية حديثة وموثوقة وسهلة الاستخدام تساعد الشركات على النمو والنجاح.
             </p>
-            <a href="#contact" class="btn-primary" data-i18n="heroContact">تواصل معنا</a>
+            <a href="#footer-contact" class="btn-primary" data-i18n="heroContact">تواصل معنا</a>
         </div>
-        <div class="hero-image">
+        <div class="hero-image reveal-on-scroll">
             <img src="assets/hero.jpg" alt="Developer typing on a laptop with code">
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
+    <section id="about" class="about-section">
+        <div class="about-card">
+            <h1 data-i18n="aboutTitle">عن أصدقاء التطوير</h1>
+            <p class="reveal-on-scroll" data-i18n="aboutP1">أصدقاء التطوير هي شركة تكنولوجية شابة وطموحة أسسها ثلاثة
+                طلاب يجمعهم الشغف بالتكنولوجيا والإبداع والابتكار.</p>
+            <p class="reveal-on-scroll" data-i18n="aboutP2">ما بدأ كفكرة بسيطة نما من خلال التفاني والمثابرة والرغبة في
+                إيجاد حلول رقمية هادفة. اليوم، نعمل معاً لتحويل الأفكار إلى مواقع حديثة وتطبيقات هواتف وحلول برمجية
+                مخصصة.</p>
+            <p class="reveal-on-scroll" data-i18n="aboutP3">كفريق متنامٍ، نحن نتعلم باستمرار ونتحسن ونستكشف تقنيات
+                جديدة. هدفنا هو بناء منتجات رقمية موثوقة وسهلة الاستخدام مع تحويل تحدياتنا إلى فرص للنمو.</p>
+            <p class="reveal-on-scroll" data-i18n="aboutP4">نحن نؤمن بأن الأشياء العظيمة يمكن أن تبدأ بفكرة بسيطة، فريق
+                قوي، وتصميم على الاستمرار.</p>
+        </div>
+    </section>
+
+    <section id="vision" class="about-section">
+        <div class="about-card">
+            <h2 data-i18n="visionTitle">رؤيتنا</h2>
+            <p class="reveal-on-scroll" data-i18n="visionP1">أن نصبح شركة تقنية رائدة في ابتكار حلول رقمية ذكية وموثوقة،
+                تُحوّل الأفكار الطموحة إلى منتجات مؤثرة، وتُسهّل حياة الأفراد والأعمال، وتُسهم في بناء مستقبل أكثر
+                ابتكارًا وتقدمًا.</p>
+            <p class="reveal-on-scroll" data-i18n="visionP2">نطمح إلى أن نكون شريكًا موثوقًا لكل من يسعى إلى تحويل فكرته
+                إلى واقع رقمي، من خلال التكنولوجيا والإبداع والتعلّم المستمر، مع التركيز على تقديم تجارب استثنائية وحلول
+                قابلة للنمو والتطور.</p>
+            <p class="reveal-on-scroll" data-i18n="visionP3">نحن لا نبني منتجات اليوم فقط، بل نبتكر حلولًا تصنع فرص
+                الغد.</p>
+        </div>
+    </section>
+
+    <section id="mission" class="about-section">
+        <div class="about-card">
+            <h2 data-i18n="missionTitle">رسالتنا</h2>
+            <p class="reveal-on-scroll" data-i18n="missionP1">تتمثل رسالتنا في تطوير حلول تقنية مبتكرة وموثوقة تساعد
+                الأفراد والشركات على تحويل أفكارهم وتحدياتهم إلى منتجات رقمية عملية وذات قيمة حقيقية.</p>
+            <p class="reveal-on-scroll" data-i18n="missionP2">نعمل على توظيف التكنولوجيا الحديثة والإبداع لفهم احتياجات
+                عملائنا، وتصميم تجارب رقمية سهلة وفعّالة، وبناء تطبيقات ومنتجات قابلة للتطور والنمو.</p>
+            <p class="reveal-on-scroll" data-i18n="missionP3">ونؤمن بأن نجاحنا يبدأ من نجاح عملائنا، لذلك نلتزم بالتعلّم
+                المستمر، والجودة، والابتكار، وبناء شراكات طويلة الأمد تساهم في تحويل الأفكار إلى إنجازات ملموسة.</p>
+        </div>
+    </section>
+
+    <section id="founders" class="founders-section">
+        <div class="founders-header reveal-on-scroll">
+            <h2 data-i18n="foundersTitle">المؤسسون</h2>
+        </div>
+
+        <div class="founders-grid">
+            <div class="founder-card reveal-on-scroll">
+                <img src="assets/taha.jpg" alt="Taha Osman" class="founder-img"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj48Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSI3NSIgZmlsbD0iI2YwZjJmNSIvPjwvc3ZnPg=='">
+                <h3 data-i18n="founder1Name">طه عثمان</h3>
+                <p data-i18n="founder1Role">المدير التنفيذي</p>
+            </div>
+
+            <div class="founder-card reveal-on-scroll">
+                <img src="assets/muawia.jpg" alt="Muawia Mohmed" class="founder-img"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj48Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSI3NSIgZmlsbD0iI2YwZjJmNSIvPjwvc3ZnPg=='">
+                <h3 data-i18n="founder2Name">معاوية محمد</h3>
+                <p data-i18n="founder2Role">المدير التقني</p>
+            </div>
+
+            <div class="founder-card reveal-on-scroll">
+                <img src="assets/coo.jpg" alt="COO Profile" class="founder-img"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj48Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSI3NSIgZmlsbD0iI2YwZjJmNSIvPjwvc3ZnPg=='">
+                <h3 data-i18n="founder3Name">محمد عثمان </h3>
+                <p data-i18n="founder3Role">مدير التشغيل</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-page-wrapper">
+        <div class="services-header">
+            <h1 data-i18n="servicesTitle">خدماتنا</h1>
+            <p data-i18n="servicesSubtitle">اكتشف الحلول الرقمية التي نقدمها لمساعدة عملك على النمو.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Mobile Apps -->
+            <div class="service-card reveal-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <h3 data-i18n="srvMobileTitle">تطبيقات الهواتف</h3>
+                <p data-i18n="srvMobileDesc">تطبيقات هواتف حديثة مصممة لتلبية احتياجاتك.</p>
+            </div>
+
+            <!-- Web Development -->
+            <div class="service-card reveal-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3 data-i18n="srvWebTitle">تطوير الويب</h3>
+                <p data-i18n="srvWebDesc">مواقع ويب سريعة ومتجاوبة واحترافية.</p>
+            </div>
+
+            <!-- E-Commerce -->
+            <div class="service-card reveal-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </div>
+                <h3 data-i18n="srvEcomTitle">التجارة الإلكترونية</h3>
+                <p data-i18n="srvEcomDesc">حلول متاجر إلكترونية متكاملة لعملك.</p>
+            </div>
+
+            <!-- Business Systems -->
+            <div class="service-card reveal-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <h3 data-i18n="srvBusTitle">أنظمة الأعمال</h3>
+                <p data-i18n="srvBusDesc">برمجيات مخصصة لتبسيط وإدارة أعمالك.</p>
+            </div>
+
+            <!-- School Systems -->
+            <div class="service-card reveal-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                </div>
+                <h3 data-i18n="srvSchoolTitle">الأنظمة المدرسية</h3>
+                <p data-i18n="srvSchoolDesc">حلول رقمية ذكية لإدارة المدارس الحديثة.</p>
+            </div>
+
+            <!-- Graphic Design -->
+            <div class="service-card reveal-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                        <path d="M2 12h20"></path>
+                    </svg>
+                </div>
+                <h3 data-i18n="srvDesignTitle">التصميم الجرافيكي</h3>
+                <p data-i18n="srvDesignDesc">تصاميم إبداعية تجعل علامتك التجارية تبرز.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="achievements-page-wrapper">
+        <div class="achievements-header">
+            <h1 data-i18n="achTitle">إنجازاتنا</h1>
+            <p data-i18n="achSubtitle">تقديم حلول رقمية مؤثرة.</p>
+        </div>
+
+        <section class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label" data-i18n="statProjects">مشاريع منجزة</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="20">0</div>
+                <div class="stat-label" data-i18n="statClients">عملاء سعداء</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="45000">0</div>
+                <div class="stat-label" data-i18n="statLines">سطور من الكود</div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <!-- Project 1 -->
+            <div class="project-row">
+                <div class="project-image reveal-on-scroll">
+                    <img src="assets/project1.jpg" alt="Friends Fast-Food Ordering System" class="placeholder-img"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZjBmMmY1Ij48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI2YwZjJmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkeT0iLjNlbSIgZmlsbD0iI2FhYSIgZm9udC1mYW1pbHk9IkNhcmlvLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qcm9qZWN0IEltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg=='">
+                </div>
+                <div class="project-content reveal-on-scroll">
+                    <h2 data-i18n="proj1Title">نظام طلب الوجبات السريعة للأصدقاء</h2>
+                    <p data-i18n="proj1Desc">تطبيق ويب شامل للتوصيل داخل الحرم الجامعي يتميز بسير عمل متكامل للدفع عبر
+                        الأموال المحمولة، وتتبع مباشر للتوصيل، وواجهات إدارة إدارية مخصصة.</p>
+                    <a href="#" class="btn-secondary" data-i18n="btnDetails">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-row reverse">
+                <div class="project-image reveal-on-scroll">
+                    <img src="assets/project2.jpg" alt="Bint Khuwaylid Student Registration System"
+                        class="placeholder-img"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZjBmMmY1Ij48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI2YwZjJmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkeT0iLjNlbSIgZmlsbD0iI2FhYSIgZm9udC1mYW1pbHk9IkNhcmlvLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qcm9qZWN0IEltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg=='">
+                </div>
+                <div class="project-content reveal-on-scroll">
+                    <h2 data-i18n="proj2Title">نظام تسجيل طلاب بنت خويلد</h2>
+                    <p data-i18n="proj2Desc">تطبيق ويب كامل لتسجيل الطلاب عبر الإنترنت يتميز ببوابات عامة وأولياء أمور
+                        وإداريين آمنة، مصمم بنظام ألوان أزرق مخصص مستوحى من الزي المدرسي.</p>
+                    <a href="#" class="btn-secondary" data-i18n="btnDetails">عرض التفاصيل</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer class="footer" id="footer-contact">
         <div class="footer-container">
-            <div class="footer-col brand-col">
+            <div class="footer-col brand-col reveal-on-scroll">
                 <img src="assets/Friends%20dev%20Logo%202.png" alt="Friends Dev Logo" class="footer-logo">
                 <p data-i18n="footerBrandDesc">بناء حلول رقمية حديثة وموثوقة وسهلة الاستخدام.</p>
             </div>
 
-            <div class="footer-col links-col">
+            <div class="footer-col links-col reveal-on-scroll">
                 <h3 data-i18n="footerLinksTitle">روابط سريعة</h3>
                 <ul>
-                    <li><a href="index.html" data-i18n="navHome">الرئيسية</a></li>
-                    <li><a href="about.html" data-i18n="navAbout">من نحن</a></li>
-                    <li><a href="services.html" data-i18n="navServices">خدماتنا</a></li>
-                    <li><a href="achievements.html" data-i18n="navAchievements">إنجازاتنا</a></li>
+                    <li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+                    <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+                    <li><a href="#vision" data-i18n="navVision">الرؤية</a></li>
+                    <li><a href="#mission" data-i18n="navMission">الرسالة</a></li>
+                    <li><a href="#founders" data-i18n="navFounders">المؤسسون</a></li>
+                    <li><a href="#services" data-i18n="navServices">خدماتنا</a></li>
+                    <li><a href="#achievements" data-i18n="navAchievements">إنجازاتنا</a></li>
                 </ul>
             </div>
 
-            <div class="footer-col contact-col">
+            <div class="footer-col contact-col reveal-on-scroll">
                 <h3 data-i18n="footerContactTitle">تواصل معنا</h3>
                 <ul>
                     <li><a href="https://wa.me/256727164537" dir="ltr" class="contact-link">+256 727164537</a></li>
