@@ -143,17 +143,26 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesTitle: "Our Services",
             servicesSubtitle: "Discover the digital solutions we offer to help your business grow.",
             srvMobileTitle: "Mobile Apps",
-            srvMobileDesc: "Modern mobile applications built around your needs.",
+            srvMobileDesc: "Custom mobile apps built for your specific needs.",
+            srvMobileDetail: "We build smooth, fast mobile apps for both iOS and Android. We typically use cross-platform frameworks like React Native or Flutter so you get one solid app that works everywhere. Our main focus is making the interface incredibly easy for your customers to navigate.",
             srvWebTitle: "Web Development",
             srvWebDesc: "Fast, responsive, and professional websites.",
+            srvWebDetail: "Whether you need a simple landing page or a complex platform, we build websites that load quickly and look great on any device. We use modern tools like Next.js and React to make sure your site is secure, SEO-friendly, and ready to scale as your business grows.",
             srvEcomTitle: "E-Commerce",
-            srvEcomDesc: "Complete online store solutions for your business.",
+            srvEcomDesc: "Complete online store solutions to sell your products easily.",
+            srvEcomDetail: "We set up complete, secure online stores so you can start selling immediately. From cataloging your products to integrating local and international payment gateways, we handle the technical heavy lifting so you can focus purely on sales.",
             srvBusTitle: "Business Systems",
-            srvBusDesc: "Custom software to simplify and manage your business.",
+            srvBusDesc: "Custom software to simplify and manage your daily operations.",
+            srvBusDetail: "Say goodbye to messy spreadsheets. We build custom dashboards and management systems (using tools like PostgreSQL and Node.js) tailored exactly to your workflow, helping you track inventory, finances, and staff all from one centralized screen.",
             srvSchoolTitle: "School Systems",
-            srvSchoolDesc: "Smart digital solutions for modern school management.",
+            srvSchoolDesc: "Smart digital solutions for modern educational administration.",
+            srvSchoolDetail: "We develop secure management systems that connect administrators, teachers, students, and parents. Our platforms automatically handle attendance records, grading, schedule management, and tuition fee tracking, making school administration a breeze.",
             srvDesignTitle: "Graphic Design",
-            srvDesignDesc: "Creative designs that make your brand stand out.",
+            srvDesignDesc: "Creative branding and designs that make your business stand out.",
+            srvDesignDetail: "Good design translates to good business. We craft clean, modern logos, engaging social media posts, and complete brand identities that speak directly to your target audience without looking cluttered or generic.",
+            clickToLearnMore: "Click to see details & technologies ➔",
+            modalHowWeBuild: "How We Build It & Technologies",
+            modalCloseBtn: "Close",
             achTitle: "Our Achievements",
             achSubtitle: "Delivering impactful digital solutions.",
             statProjects: "Projects Completed",
@@ -213,17 +222,26 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesTitle: "خدماتنا",
             servicesSubtitle: "اكتشف الحلول الرقمية التي نقدمها لمساعدة عملك على النمو.",
             srvMobileTitle: "تطبيقات الهواتف",
-            srvMobileDesc: "تطبيقات هواتف حديثة مصممة لتلبية احتياجاتك.",
+            srvMobileDesc: "تطبيقات موبايل بتظبط شغلك وتمشي معاك خطوة بخطوة.",
+            srvMobileDetail: "بنبرمج ليك تطبيقات سريعة وسهلة الاستخدام للآيفون والأندرويد. بنعتمد على تقنيات زي React Native أو Flutter عشان نطلع ليك بتطبيق واحد يشتغل في كل مكان بكفاءة، وبنركز شديد إنو التطبيق يكون مريح وسلس لعملائك.",
             srvWebTitle: "تطوير الويب",
-            srvWebDesc: "مواقع ويب سريعة ومتجاوبة واحترافية.",
+            srvWebDesc: "مواقع ويب سريعة، احترافية، وبتفتح في أي شاشة.",
+            srvWebDetail: "سواء كنت عايز موقع تعريفي بسيط أو منصة كبيرة، بنبني ليك موقع سريع وشكلو رهيب في أي جهاز. بنستخدم أحدث التقنيات زي Next.js و React عشان نضمن إنو موقعك يكون آمن، بيظهر في بحث جوجل، وقابل للتطوير قدام.",
             srvEcomTitle: "التجارة الإلكترونية",
-            srvEcomDesc: "حلول متاجر إلكترونية متكاملة لعملك.",
+            srvEcomDesc: "متاجر إلكترونية متكاملة عشان تبيع منتجاتك بكل سهولة.",
+            srvEcomDetail: "بنجهز ليك متجر إلكتروني متكامل عشان تبدأ تبيع طوالي. من رفع المنتجات لحدي ربط بوابات الدفع المحلية والعالمية، بنشيل عنك هم التقنية عشان تركز إنت في المبيعات وبس.",
             srvBusTitle: "أنظمة الأعمال",
-            srvBusDesc: "برمجيات مخصصة لتبسيط وإدارة أعمالك.",
+            srvBusDesc: "أنظمة مخصصة عشان ترتب وتسهل إدارة شغلك.",
+            srvBusDetail: "ريّح راسك من الدفاتر والإكسيل. بنصمم ليك أنظمة ولوحات تحكم مفصلة على مقاس شغلك بالضبط، عشان تقدر تتابع المخزون، الحسابات، والموظفين من شاشة واحدة وبكل سهولة.",
             srvSchoolTitle: "الأنظمة المدرسية",
-            srvSchoolDesc: "حلول رقمية ذكية لإدارة المدارس الحديثة.",
+            srvSchoolDesc: "حلول رقمية ذكية لإدارة المدارس والجامعات.",
+            srvSchoolDetail: "بنعمل أنظمة إدارة مدارس متكاملة بتربط الإدارة بالأساتذة والطلاب وأولياء الأمور. النظام بيتكفل بتسجيل الحضور، النتايج، الجداول، ومتابعة الرسوم المالية، وبيخلي شغل الإدارة ساهل ومُنظم.",
             srvDesignTitle: "التصميم الجرافيكي",
-            srvDesignDesc: "تصاميم إبداعية تجعل علامتك التجارية تبرز.",
+            srvDesignDesc: "تصاميم إبداعية بتخلي هويتك التجارية مميزة.",
+            srvDesignDetail: "التصميم السمح بيجيب الشغل السمح. بنصمم ليك شعارات، بوستات سوشيال ميديا، وهوية بصرية كاملة بشكل عصري ونظيف بيعكس قيمة البراند بتاعك للناس وبيجذب انتباههم.",
+            clickToLearnMore: "اضغط لمعرفة التقنيات والتفاصيل ➔",
+            modalHowWeBuild: "كيف بنبني الخدمة والتقنيات المستخدمة",
+            modalCloseBtn: "إغلاق",
             achTitle: "إنجازاتنا",
             achSubtitle: "تقديم حلول رقمية مؤثرة.",
             statProjects: "مشاريع منجزة",
@@ -264,6 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
+        if (window.updateActiveModalLang) {
+            window.updateActiveModalLang(lang);
+        }
+
         localStorage.setItem('siteLang', lang);
     }
     
@@ -277,4 +299,122 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(newLang);
         });
     }
+
+    // Modal implementation for Service Detail view
+    function initServiceModal() {
+        let modal = document.getElementById('serviceModal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'serviceModal';
+            modal.className = 'service-modal';
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-hidden', 'true');
+            modal.innerHTML = `
+                <div class="service-modal-overlay"></div>
+                <div class="service-modal-content">
+                    <button class="service-modal-close" aria-label="Close">&times;</button>
+                    <div class="service-modal-header">
+                        <div class="service-modal-icon" id="modalServiceIcon"></div>
+                        <div class="service-modal-title-group">
+                            <span class="service-modal-badge" data-i18n="modalHowWeBuild">كيف بنبني الخدمة والتقنيات المستخدمة</span>
+                            <h2 id="modalServiceTitle"></h2>
+                        </div>
+                    </div>
+                    <div class="service-modal-body">
+                        <p id="modalServiceDetail"></p>
+                    </div>
+                    <div class="service-modal-footer">
+                        <button class="service-modal-close-btn btn-primary" data-i18n="modalCloseBtn">إغلاق</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        let activeServiceKey = null;
+
+        function openModal(serviceKey, iconHTML, titleText) {
+            activeServiceKey = serviceKey;
+            const iconEl = modal.querySelector('#modalServiceIcon');
+            const titleEl = modal.querySelector('#modalServiceTitle');
+            const detailEl = modal.querySelector('#modalServiceDetail');
+            
+            if (iconEl && iconHTML) iconEl.innerHTML = iconHTML;
+            
+            const lang = currentLang || 'ar';
+            const titleKey = `srv${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)}Title`;
+            const detailKey = `srv${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)}Detail`;
+            
+            if (titleEl) titleEl.innerText = (translations[lang] && translations[lang][titleKey]) || titleText;
+            if (detailEl) detailEl.innerText = (translations[lang] && translations[lang][detailKey]) || '';
+            
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            activeServiceKey = null;
+        }
+
+        // Modal listeners
+        modal.addEventListener('click', (e) => {
+            if (e.target.classList.contains('service-modal-overlay') || 
+                e.target.classList.contains('service-modal-close') ||
+                e.target.classList.contains('service-modal-close-btn')) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeModal();
+            }
+        });
+
+        // Attach click listeners to all service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('role', 'button');
+            
+            const serviceKey = card.getAttribute('data-service');
+            
+            card.addEventListener('click', () => {
+                const iconHTML = card.querySelector('.service-icon')?.innerHTML;
+                const titleText = card.querySelector('h3')?.innerText;
+                if (serviceKey) {
+                    openModal(serviceKey, iconHTML, titleText);
+                }
+            });
+
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+
+        window.updateActiveModalLang = function(lang) {
+            if (activeServiceKey && modal.classList.contains('open')) {
+                const titleKey = `srv${activeServiceKey.charAt(0).toUpperCase() + activeServiceKey.slice(1)}Title`;
+                const detailKey = `srv${activeServiceKey.charAt(0).toUpperCase() + activeServiceKey.slice(1)}Detail`;
+                const titleEl = modal.querySelector('#modalServiceTitle');
+                const detailEl = modal.querySelector('#modalServiceDetail');
+                const badgeEl = modal.querySelector('.service-modal-badge');
+                const closeBtnEl = modal.querySelector('.service-modal-close-btn');
+
+                if (titleEl && translations[lang] && translations[lang][titleKey]) titleEl.innerText = translations[lang][titleKey];
+                if (detailEl && translations[lang] && translations[lang][detailKey]) detailEl.innerText = translations[lang][detailKey];
+                if (badgeEl && translations[lang] && translations[lang]['modalHowWeBuild']) badgeEl.innerText = translations[lang]['modalHowWeBuild'];
+                if (closeBtnEl && translations[lang] && translations[lang]['modalCloseBtn']) closeBtnEl.innerText = translations[lang]['modalCloseBtn'];
+            }
+        };
+    }
+
+    initServiceModal();
 });
