@@ -176,7 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
             footerCopyright: "© 2026 Friends Dev. All rights reserved.",
             "achieve-proj5-title": "Software Engineer Mohmed Portfolio",
             "achieve-proj5-desc": "A professional digital platform showcasing the skills, projects, and technical expertise of the engineer, highlighting their proficiency in software development.",
-            "achieve-btn": "View Details"
+            "achieve-btn": "View Details",
+            "achieve-proj6-title": "Friends Restaurant Platform",
+            "achieve-proj6-desc": "A comprehensive fast food delivery platform featuring an attractive interface, dynamic menu display, and a seamless shopping cart system for an exceptional user experience."
         },
         ar: {
             navHome: "الرئيسية",
@@ -246,7 +248,9 @@ document.addEventListener('DOMContentLoaded', () => {
             footerCopyright: "© 2026 Friends Dev. جميع الحقوق محفوظة.",
             "achieve-proj5-title": "معرض أعمال المهندس البرمجي محمد",
             "achieve-proj5-desc": "منصة رقمية احترافية تستعرض المهارات، والمشاريع، والخبرات التقنية الخاصة بالمهندس لتسليط الضوء على كفاءته في تطوير البرمجيات.",
-            "achieve-btn": "عرض التفاصيل"
+            "achieve-btn": "عرض التفاصيل",
+            "achieve-proj6-title": "منصة مطعم فريندز",
+            "achieve-proj6-desc": "منصة ويب متكاملة لطلب المأكولات السريعة، تتميز بواجهة جذابة وعرض ديناميكي لقائمة الطعام مع نظام سلة مشتريات سلس لتجربة مستخدم مميزة."
         }
     };
 
