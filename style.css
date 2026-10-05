@@ -469,11 +469,77 @@ section[id], footer[id] {
     margin-bottom: 0;
 }
 
+/* Read More / Collapse Styles for Mobile Written Sections */
+.about-card-more {
+    display: block;
+}
+
+.read-more-btn {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .about-card {
-        padding: 2.5rem;
+        padding: 2.2rem 1.5rem;
+        position: relative;
+    }
+
+    .about-card-more {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .about-card.expanded .about-card-more {
+        max-height: 2500px;
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+    }
+
+    .about-card.expanded .about-card-more .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .read-more-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 1.25rem;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--color-btn-bg);
+        color: #ffffff;
+        border: none;
+        border-radius: 50px;
+        font-family: var(--font-family);
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all var(--transition-speed) ease;
+        box-shadow: 0 4px 15px rgba(31, 17, 58, 0.15);
+    }
+
+    .read-more-btn:hover,
+    .read-more-btn:active {
+        background-color: var(--color-btn-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(31, 17, 58, 0.25);
+    }
+
+    .read-more-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .about-card.expanded .read-more-icon {
+        transform: rotate(180deg);
     }
 }
+
 
 /* Services Page Styles */
 .services-page-wrapper {
