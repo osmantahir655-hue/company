@@ -505,9 +505,15 @@ section[id], footer[id] {
 }
 
 @media (max-width: 992px) {
+    .about-section {
+        min-height: auto;
+        padding: 1.5rem 5%;
+    }
+
     .about-card {
-        padding: 2.2rem 1.5rem;
+        padding: 2rem 1.5rem;
         position: relative;
+        width: 100%;
     }
 
     .about-card-more {
