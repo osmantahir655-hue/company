@@ -504,7 +504,7 @@ section[id], footer[id] {
     display: none !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .about-card {
         padding: 2.2rem 1.5rem;
         position: relative;
@@ -523,6 +523,7 @@ section[id], footer[id] {
         opacity: 1;
         visibility: visible;
         overflow: visible;
+        margin-top: 1rem;
     }
 
     .about-card.expanded .about-card-more .reveal-on-scroll {
