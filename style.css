@@ -6,14 +6,14 @@
 }
 
 :root {
-    --color-bg: #f8f9fa;
-    /* Pale gray / off-white */
+    --color-bg: #f7f5ef;
+    /* Warm off-white / light cream */
     --color-text-dark: #2a1b4d;
     /* Deep indigo / purple */
     --color-text-light: #7a5c9f;
     /* Lighter violet / purple */
-    --color-nav-bg: #f0f2f5;
-    /* Light gray background */
+    --color-nav-bg: rgba(245, 243, 238, 0.85);
+    /* Light cream background with glass opacity */
     --color-btn-bg: #1f113a;
     /* Dark indigo */
     --color-btn-hover: #3f2671;
@@ -24,9 +24,15 @@
 body {
     font-family: var(--font-family);
     background-color: var(--color-bg);
+    background-image: url('assets/BACK.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--color-text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 html {
@@ -45,7 +51,9 @@ section[id], footer[id] {
     padding: 1.5rem 5%;
     max-width: 1400px;
     margin: 0 auto;
-    background-color: var(--color-bg);
+    background-color: rgba(247, 245, 239, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -464,12 +472,14 @@ section[id], footer[id] {
 }
 
 .about-card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     max-width: 800px;
     padding: 4rem;
     border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(42, 27, 77, 0.08);
-    border: 1px solid rgba(122, 92, 159, 0.1);
+    box-shadow: 0 16px 40px rgba(14, 42, 128, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
@@ -608,11 +618,13 @@ section[id], footer[id] {
 }
 
 .service-card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 2.5rem 2rem 2rem 2rem;
     border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(42, 27, 77, 0.05);
-    border: 1px solid rgba(122, 92, 159, 0.08);
+    box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
     display: flex;
     flex-direction: column;
@@ -873,11 +885,13 @@ section[id], footer[id] {
 }
 
 .founder-card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 2.5rem 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(42, 27, 77, 0.05);
-    border: 1px solid rgba(122, 92, 159, 0.08);
+    box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     display: flex;
     flex-direction: column;
@@ -973,10 +987,13 @@ section[id], footer[id] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(42, 27, 77, 0.05);
+    box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     margin-bottom: 6rem;
     animation: fadeUp 1s ease-out 0.2s forwards;
     opacity: 0;
