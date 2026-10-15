@@ -26,7 +26,7 @@
 body {
     font-family: var(--font-family);
     background-color: var(--color-bg);
-    background-image: url('assets/BACK.jpg');
+    background-image: url('assets/BACK-optimized.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -61,8 +61,8 @@ section[id], footer[id] {
     max-width: 1400px;
     margin: 0 auto;
     background-color: rgba(247, 245, 239, 0.96);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -251,8 +251,8 @@ section[id], footer[id] {
     border: 1px solid rgba(255, 255, 255, 0.88);
     border-radius: 28px;
     background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 18px 45px rgba(24, 22, 48, 0.12);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
@@ -511,8 +511,8 @@ section[id], footer[id] {
 
 .about-card {
     background-color: var(--color-text-surface);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     max-width: 800px;
     padding: 4rem;
     border-radius: 24px;
@@ -640,8 +640,8 @@ section[id], footer[id] {
     border: 1px solid rgba(255, 255, 255, 0.88);
     border-radius: 24px;
     background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 14px 36px rgba(24, 22, 48, 0.1);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
@@ -667,8 +667,8 @@ section[id], footer[id] {
 
 .service-card {
     background-color: var(--color-text-surface);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     padding: 2.5rem 2rem 2rem 2rem;
     border-radius: 24px;
     box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
@@ -923,8 +923,8 @@ section[id], footer[id] {
     border: 1px solid rgba(255, 255, 255, 0.88);
     border-radius: 22px;
     background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 14px 36px rgba(24, 22, 48, 0.1);
     text-align: center;
 }
@@ -959,8 +959,8 @@ section[id], footer[id] {
     position: relative;
     isolation: isolate;
     background-color: var(--color-text-surface);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     padding: 2.5rem 2rem;
     border-radius: 20px;
     box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
@@ -1062,8 +1062,8 @@ section[id], footer[id] {
     border: 1px solid rgba(255, 255, 255, 0.88);
     border-radius: 24px;
     background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 14px 36px rgba(24, 22, 48, 0.1);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
@@ -1088,8 +1088,8 @@ section[id], footer[id] {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     background-color: var(--color-text-surface);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
@@ -1166,8 +1166,8 @@ section[id], footer[id] {
     border: 1px solid rgba(255, 255, 255, 0.88);
     border-radius: 24px;
     background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 16px 40px rgba(24, 22, 48, 0.1);
 }
 

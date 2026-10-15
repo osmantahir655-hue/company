@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBGG29YH0G"></script>
+    <script async fetchpriority="low" src="https://www.googletagmanager.com/gtag/js?id=G-VBGG29YH0G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -25,7 +26,7 @@
     <header class="header">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="assets/Friends%20dev%20Logo%202.png" alt="Friends Dev Logo" class="logo-img">
+                <img src="assets/Friends-dev-logo-512.png" alt="Friends Dev Logo" class="logo-img" width="512" height="512">
             </a>
         </div>
         <div class="header-right">
@@ -71,7 +72,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col brand-col reveal-on-scroll">
-                <img src="assets/Friends%20dev%20Logo%202.png" alt="Friends Dev Logo" class="footer-logo">
+                <img src="assets/Friends-dev-logo-512.png" alt="Friends Dev Logo" class="footer-logo"
+                    width="512" height="512" loading="lazy" decoding="async">
                 <p data-i18n="footerBrandDesc">بناء حلول رقمية حديثة وموثوقة وسهلة الاستخدام.</p>
             </div>
 
@@ -101,7 +103,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/256727164537" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">

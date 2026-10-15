@@ -36,23 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add a subtle parallax effect on the hero image based on mouse movement
-    const heroImage = document.querySelector('.hero-image img');
-    
-    if (heroImage && window.matchMedia("(min-width: 992px)").matches) {
-        document.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
-            
-            heroImage.style.transform = `translate(${xAxis}px, ${yAxis}px) scale(1.02)`;
-        });
-        
-        // Reset transform on mouse leave
-        document.addEventListener('mouseleave', () => {
-            heroImage.style.transform = 'translate(0px, 0px) scale(1)';
-        });
-    }
-
     // Scroll Reveal functionality using IntersectionObserver
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     
@@ -82,17 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     const finalValue = parseInt(target.getAttribute('data-target'), 10);
                     let startValue = 0;
                     const duration = 2000; // 2 seconds
-                    const frameRate = 1000 / 60;
-                    const totalFrames = Math.round(duration / frameRate);
-                    const increment = finalValue / totalFrames;
-                    
-                    const counter = setInterval(() => {
-                        startValue += increment;
-                        if (startValue >= finalValue) {
-                            target.innerText = finalValue.toLocaleString(); // adds commas for thousands
-                            clearInterval(counter);
-                        } else {
-                            target.innerText = Math.ceil(startValue).toLocaleString();
+                    const startTime = performance.now();
+                    let lastUpdate = startTime;
+                    let lastValue = -1;
+
+                    function updateCounter(timestamp) {
+                        const progress = Math.min((timestamp - startTime) / duration, 1);
+                        const value = progress === 1 ? finalValue : Math.floor(finalValue * progress);
+
+                        if (value !== lastValue && (timestamp - lastUpdate >= 50 || progress === 1)) {
+                            target.textContent = value.toLocaleString();
+                            lastValue = value;
+                            lastUpdate = timestamp;
                         }
                     }, frameRate);
                     
@@ -288,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
-                el.innerText = translations[lang][key];
+                el.textContent = translations[lang][key];
             }
         });
         
@@ -355,8 +339,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const titleKey = `srv${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)}Title`;
             const detailKey = `srv${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)}Detail`;
             
-            if (titleEl) titleEl.innerText = (translations[lang] && translations[lang][titleKey]) || titleText;
-            if (detailEl) detailEl.innerText = (translations[lang] && translations[lang][detailKey]) || '';
+            if (titleEl) titleEl.textContent = (translations[lang] && translations[lang][titleKey]) || titleText;
+            if (detailEl) detailEl.textContent = (translations[lang] && translations[lang][detailKey]) || '';
             
             modal.classList.add('open');
             modal.setAttribute('aria-hidden', 'false');
@@ -373,6 +357,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Modal listeners
         modal.addEventListener('click', (e) => {
             if (e.target.classList.contains('service-modal-overlay') || 
+        const serviceGrid = document.querySelector('.services-grid');
+        if (!serviceGrid) return;
+
                 e.target.classList.contains('service-modal-close') ||
                 e.target.classList.contains('service-modal-close-btn')) {
                 closeModal();
@@ -385,14 +372,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Attach click listeners to all service cards
-        document.querySelectorAll('.service-card').forEach(card => {
+        const serviceCards = serviceGrid.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
             card.style.cursor = 'pointer';
             card.setAttribute('tabindex', '0');
             card.setAttribute('role', 'button');
             
             const serviceKey = card.getAttribute('data-service');
-            
+        });
+
+        function handleServiceCardActivation(event) {
+            const target = event.target;
+            if (!(target instanceof Element)) return;
+
+            const card = target.closest('.service-card');
+            if (!card || !serviceGrid.contains(card)) return;
+
+            if (event.type === 'keydown') {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+            }
+
             card.addEventListener('click', () => {
                 const iconHTML = card.querySelector('.service-icon')?.innerHTML;
                 const titleText = card.querySelector('h3')?.innerText;
@@ -401,13 +401,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    card.click();
-                }
-            });
-        });
+            const icon = card.querySelector('.service-icon');
+            const title = card.querySelector('h3');
+            openModal(serviceKey, icon ? icon.innerHTML : '', title ? title.textContent : '');
+        }
+
+        serviceGrid.addEventListener('click', handleServiceCardActivation);
+        serviceGrid.addEventListener('keydown', handleServiceCardActivation);
 
         window.updateActiveModalLang = function(lang) {
             if (activeServiceKey && modal.classList.contains('open')) {
@@ -418,10 +418,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const badgeEl = modal.querySelector('.service-modal-badge');
                 const closeBtnEl = modal.querySelector('.service-modal-close-btn');
 
-                if (titleEl && translations[lang] && translations[lang][titleKey]) titleEl.innerText = translations[lang][titleKey];
-                if (detailEl && translations[lang] && translations[lang][detailKey]) detailEl.innerText = translations[lang][detailKey];
-                if (badgeEl && translations[lang] && translations[lang]['modalHowWeBuild']) badgeEl.innerText = translations[lang]['modalHowWeBuild'];
-                if (closeBtnEl && translations[lang] && translations[lang]['modalCloseBtn']) closeBtnEl.innerText = translations[lang]['modalCloseBtn'];
+                if (titleEl && translations[lang] && translations[lang][titleKey]) titleEl.textContent = translations[lang][titleKey];
+                if (detailEl && translations[lang] && translations[lang][detailKey]) detailEl.textContent = translations[lang][detailKey];
+                if (badgeEl && translations[lang] && translations[lang]['modalHowWeBuild']) badgeEl.textContent = translations[lang]['modalHowWeBuild'];
+                if (closeBtnEl && translations[lang] && translations[lang]['modalCloseBtn']) closeBtnEl.textContent = translations[lang]['modalCloseBtn'];
             }
         };
     }
