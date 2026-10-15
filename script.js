@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (entry.isIntersecting) {
                     const target = entry.target;
                     const finalValue = parseInt(target.getAttribute('data-target'), 10);
-                    let startValue = 0;
                     const duration = 2000; // 2 seconds
                     const startTime = performance.now();
                     let lastUpdate = startTime;
@@ -78,8 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             lastValue = value;
                             lastUpdate = timestamp;
                         }
-                    }, frameRate);
-                    
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        }
+                    }
+
+                    requestAnimationFrame(updateCounter);
                     observer.unobserve(target);
                 }
             });
@@ -296,6 +300,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal implementation for Service Detail view
     function initServiceModal() {
+        const serviceGrid = document.querySelector('.services-grid');
+        if (!serviceGrid) return;
+
         let modal = document.getElementById('serviceModal');
         if (!modal) {
             modal = document.createElement('div');
@@ -357,9 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Modal listeners
         modal.addEventListener('click', (e) => {
             if (e.target.classList.contains('service-modal-overlay') || 
-        const serviceGrid = document.querySelector('.services-grid');
-        if (!serviceGrid) return;
-
                 e.target.classList.contains('service-modal-close') ||
                 e.target.classList.contains('service-modal-close-btn')) {
                 closeModal();
@@ -377,8 +381,6 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.cursor = 'pointer';
             card.setAttribute('tabindex', '0');
             card.setAttribute('role', 'button');
-            
-            const serviceKey = card.getAttribute('data-service');
         });
 
         function handleServiceCardActivation(event) {
@@ -393,13 +395,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
             }
 
-            card.addEventListener('click', () => {
-                const iconHTML = card.querySelector('.service-icon')?.innerHTML;
-                const titleText = card.querySelector('h3')?.innerText;
-                if (serviceKey) {
-                    openModal(serviceKey, iconHTML, titleText);
-                }
-            });
+            const serviceKey = card.getAttribute('data-service');
+            if (!serviceKey) return;
 
             const icon = card.querySelector('.service-icon');
             const title = card.querySelector('h3');
@@ -490,4 +487,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initReadMoreToggles();
 });
-
