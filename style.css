@@ -1148,7 +1148,9 @@ section[id], footer[id] {
 
 .project-image img {
     width: 100%;
+    height: auto;
     border-radius: 20px;
+    border: 1px solid rgba(42, 27, 77, 0.1);
     box-shadow: 0 20px 40px rgba(42, 27, 77, 0.1);
     transition: transform var(--transition-speed) ease;
     display: block;
