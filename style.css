@@ -6,6 +6,7 @@
 }
 
 :root {
+    color-scheme: light;
     --color-bg: #f7f5ef;
     /* Warm off-white / light cream */
     --color-text-dark: #2a1b4d;
