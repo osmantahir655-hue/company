@@ -12,11 +12,13 @@
     /* Deep indigo / purple */
     --color-text-light: #7a5c9f;
     /* Lighter violet / purple */
-    --color-nav-bg: rgba(245, 243, 238, 0.85);
+    --color-nav-bg: rgba(245, 243, 238, 0.96);
     /* Light cream background with glass opacity */
     --color-btn-bg: #1f113a;
     /* Dark indigo */
     --color-btn-hover: #3f2671;
+    --color-text-surface: rgba(255, 255, 255, 0.95);
+    --color-text-surface-soft: rgba(247, 245, 239, 0.94);
     --font-family: 'Cairo', sans-serif;
     --transition-speed: 0.3s;
 }
@@ -39,6 +41,13 @@ html {
     scroll-behavior: smooth;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #6b4bcc;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
 section[id], footer[id] {
     scroll-margin-top: 100px;
 }
@@ -51,9 +60,9 @@ section[id], footer[id] {
     padding: 1.5rem 5%;
     max-width: 1400px;
     margin: 0 auto;
-    background-color: rgba(247, 245, 239, 0.82);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(247, 245, 239, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -164,6 +173,7 @@ section[id], footer[id] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     background-color: var(--color-btn-bg);
     color: #ffffff;
     font-weight: 700;
@@ -172,6 +182,20 @@ section[id], footer[id] {
     text-decoration: none;
     transition: all var(--transition-speed) ease;
     white-space: nowrap;
+}
+
+.nav-cta-btn::before,
+.btn-primary::before,
+.btn-secondary::before,
+.btn-secondary-outline::before {
+    content: '';
+    position: absolute;
+    inset-block: 10px;
+    inset-inline-start: 12px;
+    width: 10px;
+    background: rgba(255, 255, 255, 0.42);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transition: transform var(--transition-speed) ease;
 }
 
 .nav-cta-btn:hover {
@@ -223,6 +247,13 @@ section[id], footer[id] {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 28px;
+    background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 18px 45px rgba(24, 22, 48, 0.12);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
@@ -248,6 +279,7 @@ section[id], footer[id] {
 /* Call to Action Button */
 .btn-primary {
     display: inline-block;
+    position: relative;
     background-color: var(--color-btn-bg);
     color: #ffffff;
     padding: 1.2rem 3rem;
@@ -275,7 +307,8 @@ section[id], footer[id] {
 
 .btn-secondary-outline {
     display: inline-block;
-    background-color: transparent;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.94);
     color: #312e81;
     border: 2px solid #312e81;
     padding: 1.2rem 3rem;
@@ -288,8 +321,13 @@ section[id], footer[id] {
 }
 
 .btn-secondary-outline:hover {
-    background-color: #e0e7ff;
+    background-color: #ffffff;
     transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(31, 17, 58, 0.14);
+}
+
+.btn-secondary-outline::before {
+    background: rgba(49, 46, 129, 0.2);
 }
 
 /* Right Column: Image */
@@ -472,9 +510,9 @@ section[id], footer[id] {
 }
 
 .about-card {
-    background-color: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--color-text-surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     max-width: 800px;
     padding: 4rem;
     border-radius: 24px;
@@ -594,7 +632,17 @@ section[id], footer[id] {
 
 .services-header {
     text-align: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
     margin-bottom: 4rem;
+    padding: 1.5rem 2.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 36px rgba(24, 22, 48, 0.1);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
@@ -618,9 +666,9 @@ section[id], footer[id] {
 }
 
 .service-card {
-    background-color: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--color-text-surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 2.5rem 2rem 2rem 2rem;
     border-radius: 24px;
     box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
@@ -866,8 +914,31 @@ section[id], footer[id] {
 }
 
 .founders-header {
+    position: relative;
+    isolation: isolate;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 4rem;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 22px;
+    background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 36px rgba(24, 22, 48, 0.1);
     text-align: center;
-    margin-bottom: 4rem;
+}
+
+.founders-header::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #6b4bcc, #312e81);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    opacity: 0.8;
 }
 
 .founders-header h2 {
@@ -885,9 +956,11 @@ section[id], footer[id] {
 }
 
 .founder-card {
-    background-color: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    position: relative;
+    isolation: isolate;
+    background-color: var(--color-text-surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 2.5rem 2rem;
     border-radius: 20px;
     box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
@@ -897,6 +970,18 @@ section[id], footer[id] {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.founder-card::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 1rem;
+    inset-inline-start: 1rem;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #6b4bcc, #312e81);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    opacity: 0.65;
 }
 
 .founder-card:hover {
@@ -910,12 +995,13 @@ section[id], footer[id] {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1.5rem;
-    border: 4px solid var(--color-nav-bg);
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 2px rgba(49, 46, 129, 0.72), 0 12px 28px rgba(31, 17, 58, 0.2);
     transition: transform 0.4s ease;
 }
 
 .founder-card:hover .founder-img {
-    transform: scale(1.08) rotate(2deg);
+    transform: scale(1.04);
 }
 
 .founder-img-link {
@@ -923,10 +1009,14 @@ section[id], footer[id] {
     border-radius: 50%;
     margin-bottom: 1.5rem;
     cursor: pointer;
+    padding: 3px;
+    background: linear-gradient(135deg, #6b4bcc, #312e81 55%, #9a83dc);
+    box-shadow: 0 12px 28px rgba(31, 17, 58, 0.18);
 }
 
 .founder-img-link .founder-img {
     margin-bottom: 0;
+    box-shadow: 0 0 0 3px #ffffff;
 }
 
 .founder-card h3 {
@@ -964,7 +1054,17 @@ section[id], footer[id] {
 
 .achievements-header {
     text-align: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
     margin-bottom: 3rem;
+    padding: 1.5rem 2.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 36px rgba(24, 22, 48, 0.1);
     animation: fadeUp 0.8s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
@@ -987,9 +1087,9 @@ section[id], footer[id] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--color-text-surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 14px 35px rgba(14, 42, 128, 0.06);
@@ -1062,6 +1162,13 @@ section[id], footer[id] {
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--color-text-surface), var(--color-text-surface-soft));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 16px 40px rgba(24, 22, 48, 0.1);
 }
 
 .project-content h2 {
@@ -1081,6 +1188,7 @@ section[id], footer[id] {
 
 .btn-secondary {
     display: inline-block;
+    position: relative;
     background-color: var(--color-btn-bg);
     color: #ffffff;
     padding: 0.9rem 2.2rem;
@@ -1164,7 +1272,7 @@ section[id], footer[id] {
 
 /* Footer Styles */
 .footer {
-    background-color: #312e81;
+    background-color: var(--color-btn-bg);
     color: #f8f9fa;
     padding: 4rem 5% 2rem 5%;
     font-family: var(--font-family);
@@ -1218,7 +1326,7 @@ section[id], footer[id] {
 }
 
 .links-col ul li a:hover, .contact-col ul li a:hover {
-    color: var(--color-text-light);
+    color: #ffffff;
 }
 
 .contact-col span {
@@ -1258,5 +1366,29 @@ section[id], footer[id] {
     }
     .footer {
         padding: 3rem 5% 1.5rem 5%;
+    }
+
+    .services-header,
+    .achievements-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .founders-header {
+        padding: 0.85rem 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
